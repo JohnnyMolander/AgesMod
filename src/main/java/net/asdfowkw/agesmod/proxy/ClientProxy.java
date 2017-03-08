@@ -1,9 +1,12 @@
 package net.asdfowkw.agesmod.proxy;
 
 import net.asdfowkw.agesmod.AgesMod;
+import net.asdfowkw.agesmod.gui.overlay.Overlay;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 /**
@@ -11,14 +14,22 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
  */
 public class ClientProxy extends CommonProxy {
 
+    private Minecraft mc = Minecraft.getMinecraft();
+
     public void preInit(){}
     public void init(){
+
+        registerRenders();
 
         //NetworkRegistry.INSTANCE.registerGuiHandler(AgesMod.instance, new GuiHandler());
 
     }
 
     public void postInit(){}
+
+    public void registerRenders(){
+        MinecraftForge.EVENT_BUS.register(new Overlay(mc));
+    }
 
     public void registerItemrenderer(Item item, int meta, String id) {
 
