@@ -1,7 +1,9 @@
 package net.asdfowkw.agesmod;
 
 import net.asdfowkw.agesmod.client.AgesTab;
+import net.asdfowkw.agesmod.gui.overlay.Overlay;
 import net.asdfowkw.agesmod.proxy.CommonProxy;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
