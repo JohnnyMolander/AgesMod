@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Logger;
 /**
  * Created by Johnny on 2017-03-08.
  */
+@Mod(modid = AgesMod.MODID, name = AgesMod.MODNAME, version = AgesMod.MODVERSION, dependencies = "required-after:Forge@[11.16.0.1865,)", useMetadata = true)
 public class AgesMod {
 
     public static final String MODID = "agesmod";

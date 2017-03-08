@@ -13,11 +13,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModItems {
 
     public static ItemBase ingotCopper;
-    public static ItemBase corn;
 
     public static void init() {
         ingotCopper = register(new ItemOre("ingotCopper", "ingotCopper"));
-        corn = register(new ItemOre("corn", "cropCorn"));
     }
 
     private static <T extends Item> T register(T item) {
