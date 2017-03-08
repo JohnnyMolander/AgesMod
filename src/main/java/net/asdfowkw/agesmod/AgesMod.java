@@ -2,6 +2,8 @@ package net.asdfowkw.agesmod;
 
 import net.asdfowkw.agesmod.client.AgesTab;
 import net.asdfowkw.agesmod.proxy.CommonProxy;
+import net.asdfowkw.agesmod.utils.AMEventHandler;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -11,9 +13,6 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import org.apache.logging.log4j.Logger;
 
-/**
- * Created by Johnny on 2017-03-08.
- */
 @Mod(modid = AgesMod.MODID, name = AgesMod.MODNAME, version = AgesMod.MODVERSION, dependencies = "required-after:Forge@[11.16.0.1865,)", useMetadata = true)
 public class AgesMod {
 
@@ -47,6 +46,8 @@ public class AgesMod {
     public void init(FMLInitializationEvent e) {
         ModRecipes.init();
         proxy.init();
+
+        MinecraftForge.EVENT_BUS.register(new AMEventHandler());
     }
 
     @Mod.EventHandler
