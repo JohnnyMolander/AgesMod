@@ -1,6 +1,7 @@
 package net.asdfowkw.agesmod.proxy;
 
 import net.asdfowkw.agesmod.AgesMod;
+import net.asdfowkw.agesmod.event.skills.Crafting;
 import net.asdfowkw.agesmod.gui.overlay.Overlay;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -29,6 +30,7 @@ public class ClientProxy extends CommonProxy {
 
     public void registerRenders(){
         MinecraftForge.EVENT_BUS.register(new Overlay(mc));
+        MinecraftForge.EVENT_BUS.register(new Crafting());
     }
 
     public void registerItemrenderer(Item item, int meta, String id) {

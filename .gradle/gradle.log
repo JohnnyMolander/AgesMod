@@ -7,34 +7,7 @@
          by: Searge, ProfMobius, Fesh0r,         
          R4wk, ZeuX, IngisKahn, bspkrs           
 #################################################
-:deobfCompileDummyTask
-:deobfProvidedDummyTask
-:getVersionJson
-:extractUserdev UP-TO-DATE
-:extractDependencyATs SKIPPED
-:extractMcpData SKIPPED
-:extractMcpMappings SKIPPED
-:genSrgs SKIPPED
-:downloadClient SKIPPED
-:downloadServer SKIPPED
-:splitServerJar SKIPPED
-:mergeJars SKIPPED
-:deobfMcSRG SKIPPED
-:decompileMc SKIPPED
-:fixMcSources SKIPPED
-:applySourcePatches SKIPPED
-:remapMcSources SKIPPED
-:recompileMc SKIPPED
-:extractNatives SKIPPED
-:getAssetIndex UP-TO-DATE
-:getAssets
-:makeStart
-:setupDecompWorkspace
-:ideaModule
-:ideaProject
-:ideaWorkspace
-:idea
 
-BUILD SUCCESSFUL
+CONFIGURE SUCCESSFUL
 
-Total time: 13.375 secs
+Total time: 4.488 secs
